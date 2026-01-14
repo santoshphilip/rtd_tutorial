@@ -12,3 +12,10 @@ python:
 sphinx:
   configuration: docs/source/conf.py
   fail_on_warning: true
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+    # Install our python package before building the docs
+    - method: pip
+      path: .
